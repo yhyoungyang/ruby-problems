@@ -25,3 +25,16 @@ def decrypt(message)
 end
 
 puts decrypt($a)
+
+# Time taken: 60mins
+# 5 key learnings: 
+# 1. $ ------------------> can be used to declare a global variable
+# 2. each_char ----------> allows access to each character within a string
+# 3. each_with_index ----> access each element within an array 
+# 4. puts ---------------> prints out the results of an object
+# 5. prints -------------> prints out the results of a method
+# 6. arr.push -----------> assuming arr is defined as an array, .push inserts new elements into the array
+# 7. arr.join -----------> assuming arr is defined as an array, assuming each element in array is a string, .join connects all the strings in the array 
+# 8. object.class -------> checks the nature of the object (array, string, fixnum etc)
+# 9. fixnum -------------> in Ruby, fixnum are considered integers and have access to all methods of integers; fixnum consists at least 24 bits
+# 10. bignum ------------> numbers bigger than 2 in Ruby 
