@@ -8,4 +8,8 @@ end
 puts isPalindrome("12344321")
 puts isPalindrome("1234321")
 puts isPalindrome("12345321")
-puts isPalindrome("stats")
+puts "is stats palindromic? #{isPalindrome("stats")}"
+
+# 5 key learnings: 
+# 1. Why is return not needed?------> The last statement of any function is the function it'll return. [redundancy]
+# 2. "#{xxxxxx}"" ---------------------------> Whatever, in this case xxxxxx, you put into the curly braces will escape the quotations
