@@ -2,11 +2,10 @@
 #Write a function to encrypt a message (by shifting char code up or down). Write a function to decrypt a message
 
 # Useful methods:
-# - [String::ord](http://ruby-doc.org/core-2.2.0/String.html#method-i-ord) => encryption 
-# - [String::chr](http://ruby-doc.org/core-2.0.0/String.html#method-i-chr) => decryption
+# - [String::ord](http://ruby-doc.org/core-2.2.0/String.html#method-i-ord) => encryption & decryption
+# - [String::chr](http://ruby-doc.org/core-2.0.0/String.html#method-i-chr) => encryption & decryption
 
-
-
+#method 1 (needs to be modified)
 $a = []
 def encrypt(message)
   message.each_char do |i|
@@ -26,8 +25,31 @@ end
 
 puts decrypt($a)
 
+#method 2
+
+OFFSET = 1
+
+def encrypt(message)
+  encrypted = ""
+  message.each_char {|c| encrypted << (c.ord+OFFSET).chr }
+  encrypted
+end
+
+def decrypt(message)
+  decrypted = ""
+  message.each_char {|c| decrypted << (c.orf-OFFSET).chr}
+end
+
+message = "Matz is Nice So We Are Nice"
+puts "Original msg: #{message}"
+
+messageEncrypted = encrypt(message)
+puts "Encrypted msg: #{messageEncrypted}"
+
+puts "Decrypted msg: #{messageEncrypted}"
+
 # Time taken: 60mins
-# 5 key learnings: 
+#  key learnings: 
 # 1. $ ------------------> can be used to declare a global variable
 # 2. each_char ----------> allows access to each character within a string
 # 3. each_with_index ----> access each element within an array 
@@ -38,3 +60,6 @@ puts decrypt($a)
 # 8. object.class -------> checks the nature of the object (array, string, fixnum etc)
 # 9. fixnum -------------> in Ruby, fixnum are considered integers and have access to all methods of integers; fixnum consists at least 24 bits
 # 10. bignum ------------> numbers bigger than 2 in Ruby 
+# ============================================================================================
+# 11. CAPSLETTER --------> created a constant
+# 12. |x| ---------------> piped variable is called an iterator 
